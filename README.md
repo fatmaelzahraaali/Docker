@@ -9,10 +9,12 @@ docker volume create vol_config
 
 docker run -d --name my-nginx -v vol_html:/usr/share/nginx/html -v vol_config:/etc/nginx nginx
 
-#change the html file 
+#change the html file
+ 
 echo "<html><body><h1>Hello, World! Updated Content.</h1></body></html>" > /usr/share/nginx/html/index.html
 
 #delete the container
+
 docker rm container_id
 
 volume mount :
